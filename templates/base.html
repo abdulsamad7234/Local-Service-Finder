@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Local Service Finder{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#2563eb",
+                600: "#1d4ed8",
+                700: "#1e40af",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
+    <nav class="border-b border-white/10 bg-slate-950 text-white">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <a
+          class="text-xl font-bold tracking-tight text-white"
+          href="{% url 'services:home' %}"
+          >Local Service Finder</a
+        >
+        <div class="flex flex-wrap items-center gap-2 text-sm font-medium">
+          <a
+            class="rounded-full px-4 py-2 text-slate-200 transition hover:bg-white/10 hover:text-white"
+            href="{% url 'services:home' %}"
+            >Home</a
+          >
+          <a
+            class="rounded-full px-4 py-2 text-slate-200 transition hover:bg-white/10 hover:text-white"
+            href="{% url 'services:service_list' %}"
+            >Browse Services</a
+          >
+          <a
+            class="rounded-full bg-brand-600 px-4 py-2 text-white shadow-sm transition hover:bg-brand-700"
+            href="{% url 'services:service_create' %}"
+            >Add Service</a
+          >
+          <a
+            class="rounded-full px-4 py-2 text-slate-200 transition hover:bg-white/10 hover:text-white"
+            href="{% url 'services:about' %}"
+            >About</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    {% if messages %}
+    <div class="mx-auto mt-6 max-w-7xl px-4 sm:px-6 lg:px-8">
+      {% for message in messages %}
+      <div
+        class="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700 shadow-sm">
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <main class="pb-12">{% block content %}{% endblock %}</main>
+
+    <footer class="mt-auto border-t border-slate-200 bg-white">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-sm text-slate-600 sm:px-6 lg:flex-row lg:justify-between lg:px-8">
+        <p>©2026 Local Service Finder. All Rights Reserved.</p>
+        <p>Created by Abdul Samad.</p>
+      </div>
+    </footer>
+  </body>
+</html>

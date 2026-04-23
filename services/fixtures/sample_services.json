@@ -1,0 +1,106 @@
+[
+  {
+    "model": "services.category",
+    "pk": 1,
+    "fields": {
+      "name": "Plumbing",
+      "slug": "plumbing"
+    }
+  },
+  {
+    "model": "services.category",
+    "pk": 2,
+    "fields": {
+      "name": "Tutoring",
+      "slug": "tutoring"
+    }
+  },
+  {
+    "model": "services.category",
+    "pk": 3,
+    "fields": {
+      "name": "Electrical",
+      "slug": "electrical"
+    }
+  },
+  {
+    "model": "services.category",
+    "pk": 4,
+    "fields": {
+      "name": "Cleaning",
+      "slug": "cleaning"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "title": "Emergency Plumbing Repairs",
+      "slug": "emergency-plumbing-repairs-ahmad-plumbing",
+      "provider_name": "Ahmad Plumbing",
+      "city": "Lahore",
+      "phone": "03001234567",
+      "email": "ahmad@example.com",
+      "address": "Johar Town",
+      "description": "Fast home plumbing support for leak repairs, pipe replacement, and bathroom fittings.",
+      "is_approved": true,
+      "created_at": "2026-04-16T10:00:00Z",
+      "updated_at": "2026-04-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "title": "Math and Physics Tutor",
+      "slug": "math-and-physics-tutor-sara-academy",
+      "provider_name": "Sara Academy",
+      "city": "Karachi",
+      "phone": "03112223344",
+      "email": "sara@example.com",
+      "address": "Gulshan-e-Iqbal",
+      "description": "One-on-one tutoring for school and college students with exam preparation support.",
+      "is_approved": true,
+      "created_at": "2026-04-16T10:05:00Z",
+      "updated_at": "2026-04-16T10:05:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "title": "Home Electrical Maintenance",
+      "slug": "home-electrical-maintenance-khan-electric",
+      "provider_name": "Khan Electric",
+      "city": "Islamabad",
+      "phone": "03215556677",
+      "email": "khan@example.com",
+      "address": "G-10 Markaz",
+      "description": "Electrical repair and maintenance for houses, apartments, and small offices.",
+      "is_approved": true,
+      "created_at": "2026-04-16T10:10:00Z",
+      "updated_at": "2026-04-16T10:10:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "title": "Weekly Home Cleaning",
+      "slug": "weekly-home-cleaning-neat-home-services",
+      "provider_name": "Neat Home Services",
+      "city": "Rawalpindi",
+      "phone": "03334445566",
+      "email": "neat@example.com",
+      "address": "Bahria Town",
+      "description": "Regular house cleaning with flexible weekly and monthly packages.",
+      "is_approved": true,
+      "created_at": "2026-04-16T10:15:00Z",
+      "updated_at": "2026-04-16T10:15:00Z"
+    }
+  }
+]
