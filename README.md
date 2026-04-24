@@ -21,7 +21,7 @@ Local Service Finder is a Django portfolio project where users can browse approv
 ## Project Structure
 
 - `local_service_finder/` project settings and root URLs
-- `services/` application logic, models, forms, views, admin, and tests
+- `services/` application logic, models, forms, views, and admin
 - `templates/` shared and app templates
 - `static/css/` custom styling
 
